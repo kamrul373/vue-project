@@ -1,5 +1,6 @@
 <template>
 	<div class="feed">
+		<AddPostForm @postdata="handleNewPostData"></AddPostForm>
 		<h2 class="body-title">Feeds</h2>
 		<div v-for="post in posts" :key="post.id">
 			<div class="post-header">
@@ -18,6 +19,7 @@
 </template>
  
 <script>
+import AddPostForm from './AddPostForm.vue'
 export default {
 	name: 'HomeFeed',
 	data() {
@@ -60,6 +62,14 @@ export default {
 					"time": "4.30 PM"
 				}
 			]
+		}
+	},
+	components: {
+		AddPostForm
+	},
+	methods: {
+		handleNewPostData(data) {
+			return this.posts.unshift(data)
 		}
 	}
 }
