@@ -14,12 +14,11 @@
 			</ul>
 		</div>
 	</div>
-	</div>
 </template>
 <script>
 export default {
 	name: 'ChannelsComponent',
-	data() {
+	data () {
 		return {
 			channels: [
 				{
@@ -48,7 +47,6 @@ export default {
 				}]
 		}
 	}
-
 }
 </script>
 <style scoped>

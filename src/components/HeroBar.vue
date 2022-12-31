@@ -26,12 +26,12 @@
 import { defineComponent } from 'vue'
 
 export default defineComponent({
-  name: 'HeroBar',
-  props: {
-    hasRightVisible: {
-      type: Boolean,
-      default: true
-    }
-  }
+	name: 'HeroBar',
+	props: {
+		hasRightVisible: {
+			type: Boolean,
+			default: true
+		}
+	}
 })
 </script>

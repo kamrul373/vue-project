@@ -37,33 +37,33 @@ import CardComponent from '@/components/CardComponent.vue'
 import GrowingNumber from '@/components/GrowingNumber.vue'
 
 export default defineComponent({
-  name: 'CardWidget',
-  components: { GrowingNumber, CardComponent },
-  props: {
-    icon: {
-      type: String,
-      default: null
-    },
-    number: {
-      type: Number,
-      default: 0
-    },
-    prefix: {
-      type: String,
-      default: null
-    },
-    suffix: {
-      type: String,
-      default: null
-    },
-    label: {
-      type: String,
-      default: null
-    },
-    type: {
-      type: String,
-      default: null
-    }
-  }
+	name: 'CardWidget',
+	components: { GrowingNumber, CardComponent },
+	props: {
+		icon: {
+			type: String,
+			default: null
+		},
+		number: {
+			type: Number,
+			default: 0
+		},
+		prefix: {
+			type: String,
+			default: null
+		},
+		suffix: {
+			type: String,
+			default: null
+		},
+		label: {
+			type: String,
+			default: null
+		},
+		type: {
+			type: String,
+			default: null
+		}
+	}
 })
 </script>

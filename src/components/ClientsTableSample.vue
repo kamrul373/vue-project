@@ -127,47 +127,47 @@ import { mapState } from 'vuex'
 import ModalBox from '@/components/ModalBox.vue'
 
 export default defineComponent({
-  name: 'ClientsTableSample',
-  components: { ModalBox },
-  props: {
-    checkable: Boolean,
-    isEmpty: Boolean,
-    perPage: {
-      type: Number,
-      default: 10
-    }
-  },
-  data () {
-    return {
-      checkedRows: [],
-      isModalActive: false,
-      trashObject: null
-    }
-  },
-  computed: {
-    paginated () {
-      return this.clients.length > this.perPage
-    },
-    ...mapState([
-      'clients'
-    ])
-  },
-  methods: {
-    trashModalOpen (obj) {
-      this.trashObject = obj
-      this.isModalActive = true
-    },
-    trashConfirm () {
-      this.isModalActive = false
+	name: 'ClientsTableSample',
+	components: { ModalBox },
+	props: {
+		checkable: Boolean,
+		isEmpty: Boolean,
+		perPage: {
+			type: Number,
+			default: 10
+		}
+	},
+	data () {
+		return {
+			checkedRows: [],
+			isModalActive: false,
+			trashObject: null
+		}
+	},
+	computed: {
+		paginated () {
+			return this.clients.length > this.perPage
+		},
+		...mapState([
+			'clients'
+		])
+	},
+	methods: {
+		trashModalOpen (obj) {
+			this.trashObject = obj
+			this.isModalActive = true
+		},
+		trashConfirm () {
+			this.isModalActive = false
 
-      this.$buefy.snackbar.open({
-        message: 'Confirmed',
-        queue: false
-      })
-    },
-    trashCancel () {
-      this.isModalActive = false
-    }
-  }
+			this.$buefy.snackbar.open({
+				message: 'Confirmed',
+				queue: false
+			})
+		},
+		trashCancel () {
+			this.isModalActive = false
+		}
+	}
 })
 </script>

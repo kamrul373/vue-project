@@ -44,34 +44,34 @@
 import { defineComponent } from 'vue'
 
 export default defineComponent({
-  name: 'ModalBox',
-  props: {
-    isActive: Boolean,
-    trashObjectName: {
-      type: String,
-      default: null
-    }
-  },
-  emits: ['cancel', 'confirm'],
-  computed: {
-    isModalActive: {
-      get: function () {
-        return this.isActive
-      },
-      set: function (value) {
-        if (!value) {
-          this.cancel()
-        }
-      }
-    }
-  },
-  methods: {
-    confirm () {
-      this.$emit('confirm')
-    },
-    cancel () {
-      this.$emit('cancel')
-    }
-  }
+	name: 'ModalBox',
+	props: {
+		isActive: Boolean,
+		trashObjectName: {
+			type: String,
+			default: null
+		}
+	},
+	emits: ['cancel', 'confirm'],
+	computed: {
+		isModalActive: {
+			get: function () {
+				return this.isActive
+			},
+			set: function (value) {
+				if (!value) {
+					this.cancel()
+				}
+			}
+		}
+	},
+	methods: {
+		confirm () {
+			this.$emit('confirm')
+		},
+		cancel () {
+			this.$emit('cancel')
+		}
+	}
 })
 </script>

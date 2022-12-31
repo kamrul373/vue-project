@@ -14,22 +14,22 @@ import { defineComponent } from 'vue'
 import AsideMenuItem from '@/components/AsideMenuItem.vue'
 
 export default defineComponent({
-  name: 'AsideMenuList',
-  components: {
-    AsideMenuItem
-  },
-  props: {
-    isSubmenuList: Boolean,
-    menu: {
-      type: Array,
-      default: () => []
-    }
-  },
-  emits: ['menu-click'],
-  methods: {
-    menuClick (item) {
-      this.$emit('menu-click', item)
-    }
-  }
+	name: 'AsideMenuList',
+	components: {
+		AsideMenuItem
+	},
+	props: {
+		isSubmenuList: Boolean,
+		menu: {
+			type: Array,
+			default: () => []
+		}
+	},
+	emits: ['menu-click'],
+	methods: {
+		menuClick (item) {
+			this.$emit('menu-click', item)
+		}
+	}
 })
 </script>

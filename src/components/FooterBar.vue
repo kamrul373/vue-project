@@ -40,16 +40,16 @@ import { defineComponent } from 'vue'
 import { mapState } from 'vuex'
 
 export default defineComponent({
-  name: 'FooterBar',
-  data () {
-    return {
-      year: new Date().getFullYear()
-    }
-  },
-  computed: {
-    ...mapState([
-      'isFooterBarVisible'
-    ])
-  }
+	name: 'FooterBar',
+	data () {
+		return {
+			year: new Date().getFullYear()
+		}
+	},
+	computed: {
+		...mapState([
+			'isFooterBarVisible'
+		])
+	}
 })
 </script>

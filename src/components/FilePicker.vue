@@ -29,60 +29,60 @@
 import { defineComponent } from 'vue'
 
 export default defineComponent({
-  name: 'FilePicker',
-  props: {
-    accept: {
-      type: String,
-      default: null
-    },
-    type: {
-      type: String,
-      default: 'is-primary'
-    }
-  },
-  emits: ['input'],
-  data () {
-    return {
-      file: null
-      // uploadPercent: 0
-    }
-  },
-  computed: {
-    buttonLabel () {
-      return this.file ? 'Pick another file' : 'Pick a file'
-    }
-  },
-  methods: {
-    upload (value) {
-      this.file = value
+	name: 'FilePicker',
+	props: {
+		accept: {
+			type: String,
+			default: null
+		},
+		type: {
+			type: String,
+			default: 'is-primary'
+		}
+	},
+	emits: ['input'],
+	data () {
+		return {
+			file: null
+			// uploadPercent: 0
+		}
+	},
+	computed: {
+		buttonLabel () {
+			return this.file ? 'Pick another file' : 'Pick a file'
+		}
+	},
+	methods: {
+		upload (value) {
+			this.file = value
 
-      this.$emit('input', value)
+			this.$emit('input', value)
 
-      // Use this as an example for handling file uploads
-      // let formData = new FormData()
-      // formData.append('file', file.value)
+			// Use this as an example for handling file uploads
+			// let formData = new FormData()
+			// formData.append('file', file.value)
 
-      // const mediaStoreRoute = `/your-route/`
+			// const mediaStoreRoute = `/your-route/`
 
-      // axios
-      //   .post(mediaStoreRoute, formData, {
-      //     headers: {
-      //       'Content-Type': 'multipart/form-data'
-      //     },
-      //     onUploadProgress: progressEvent
-      //   })
-      //   .then(r => {
-      //
-      //   })
-      //   .catch(err => {
-      //
-      //   })
-    }
-    // progressEvent (progressEvent) {
-    //   this.uploadPercent = Math.round(
-    //     (progressEvent.loaded * 100) / progressEvent.total
-    //   )
-    // }
-  }
+			// axios
+			//   .post(mediaStoreRoute, formData, {
+			//     headers: {
+			//       'Content-Type': 'multipart/form-data'
+			//     },
+			//     onUploadProgress: progressEvent
+			//   })
+			//   .then(r => {
+			//
+			//   })
+			//   .catch(err => {
+			//
+			//   })
+		}
+		// progressEvent (progressEvent) {
+		//   this.uploadPercent = Math.round(
+		//     (progressEvent.loaded * 100) / progressEvent.total
+		//   )
+		// }
+	}
 })
 </script>

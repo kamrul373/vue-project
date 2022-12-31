@@ -24,34 +24,34 @@
 import { defineComponent } from 'vue'
 
 export default defineComponent({
-  name: 'CheckboxRadioPicker',
-  props: {
-    options: {
-      type: Object,
-      default: null
-    },
-    type: {
-      type: String,
-      default: null
-    },
-    value: {
-      type: [String, Number, Array],
-      default: null
-    }
-  },
-  emits: ['input'],
-  computed: {
-    componentIs () {
-      return typeof this.value === 'object' ? 'b-checkbox' : 'b-radio'
-    },
-    newValue: {
-      get: function () {
-        return this.value
-      },
-      set: function (value) {
-        this.$emit('input', value)
-      }
-    }
-  }
+	name: 'CheckboxRadioPicker',
+	props: {
+		options: {
+			type: Object,
+			default: null
+		},
+		type: {
+			type: String,
+			default: null
+		},
+		value: {
+			type: [String, Number, Array],
+			default: null
+		}
+	},
+	emits: ['input'],
+	computed: {
+		componentIs () {
+			return typeof this.value === 'object' ? 'b-checkbox' : 'b-radio'
+		},
+		newValue: {
+			get: function () {
+				return this.value
+			},
+			set: function (value) {
+				this.$emit('input', value)
+			}
+		}
+	}
 })
 </script>

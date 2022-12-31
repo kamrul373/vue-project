@@ -1,25 +1,28 @@
 <template>
-	<div>
-		<div>
-			<ul v-for="project in projects" :key="project.id">
-				<li class="flex">
-					<div>
-						<span>{{ project.project }}</span>
-					</div>
-					<div>
-						<span class="green">+{{ project.current }} </span>
-						<span>{{ project.total }}</span>
-					</div>
-				</li>
-			</ul>
-		</div>
-	</div>
+  <div>
+    <div>
+      <ul
+        v-for="project in projects"
+        :key="project.id"
+      >
+        <li class="flex">
+          <div>
+            <span>{{ project.project }}</span>
+          </div>
+          <div>
+            <span class="green">+{{ project.current }} </span>
+            <span>{{ project.total }}</span>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
 </template>
 
 <script>
 export default {
 	name: 'ProjectsWidget',
-	data() {
+	data () {
 		return {
 			projects: [
 				{

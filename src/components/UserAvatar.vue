@@ -10,17 +10,17 @@
 import { defineComponent } from 'vue'
 
 export default defineComponent({
-  name: 'UserAvatar',
-  props: {
-    avatar: {
-      type: String,
-      default: null
-    }
-  },
-  computed: {
-    newAvatar () {
-      return this.avatar ? this.avatar : this.$store.state.userAvatar
-    }
-  }
+	name: 'UserAvatar',
+	props: {
+		avatar: {
+			type: String,
+			default: null
+		}
+	},
+	computed: {
+		newAvatar () {
+			return this.avatar ? this.avatar : this.$store.state.userAvatar
+		}
+	}
 })
 </script>

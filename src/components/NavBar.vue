@@ -166,50 +166,50 @@ import NavBarMenu from '@/components/NavBarMenu.vue'
 import UserAvatar from '@/components/UserAvatar.vue'
 
 export default defineComponent({
-  name: 'NavBar',
-  components: {
-    UserAvatar,
-    NavBarMenu
-  },
-  data () {
-    return {
-      isMenuActive: false
-    }
-  },
-  computed: {
-    asideMobileIcon () {
-      return this.isAsideMobileExpanded ? 'backburger' : 'forwardburger'
-    },
-    menuToggleIcon () {
-      return this.isMenuActive ? 'close' : 'dots-vertical'
-    },
-    ...mapState([
-      'isAsideMobileExpanded',
-      'isNavBarVisible',
-      'userName'
-    ])
-  },
-  mounted () {
-    this.$router.afterEach(() => {
-      this.isMenuActive = false
-    })
-  },
-  methods: {
-    asideToggleMobile () {
-      this.$store.commit('asideMobileStateToggle')
-    },
-    asideDesktopOnlyToggle () {
-      this.$store.dispatch('asideDesktopOnlyToggle')
-    },
-    menuToggle () {
-      this.isMenuActive = !this.isMenuActive
-    },
-    logout () {
-      this.$buefy.snackbar.open({
-        message: 'Log out clicked',
-        queue: false
-      })
-    }
-  }
+	name: 'NavBar',
+	components: {
+		UserAvatar,
+		NavBarMenu
+	},
+	data () {
+		return {
+			isMenuActive: false
+		}
+	},
+	computed: {
+		asideMobileIcon () {
+			return this.isAsideMobileExpanded ? 'backburger' : 'forwardburger'
+		},
+		menuToggleIcon () {
+			return this.isMenuActive ? 'close' : 'dots-vertical'
+		},
+		...mapState([
+			'isAsideMobileExpanded',
+			'isNavBarVisible',
+			'userName'
+		])
+	},
+	mounted () {
+		this.$router.afterEach(() => {
+			this.isMenuActive = false
+		})
+	},
+	methods: {
+		asideToggleMobile () {
+			this.$store.commit('asideMobileStateToggle')
+		},
+		asideDesktopOnlyToggle () {
+			this.$store.dispatch('asideDesktopOnlyToggle')
+		},
+		menuToggle () {
+			this.isMenuActive = !this.isMenuActive
+		},
+		logout () {
+			this.$buefy.snackbar.open({
+				message: 'Log out clicked',
+				queue: false
+			})
+		}
+	}
 })
 </script>

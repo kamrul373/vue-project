@@ -1,16 +1,21 @@
+/* eslint-disable */
 <template>
-	<div class="homesidebar">
-		<div class="widgets">
-			<h3 class="sidebar-title">Direct Messages</h3>
-			<PeoplesWidget></PeoplesWidget>
-			<h3 class="sidebar-title">#Channels</h3>
-			<ChannelsComponent></ChannelsComponent>
-			<h3 class="sidebar-title">
-				#Projects
-			</h3>
-			<ProjectsWidget></ProjectsWidget>
-		</div>
-	</div>
+  <div class="homesidebar">
+    <div class="widgets">
+      <h3 class="sidebar-title">
+        Direct Messages
+      </h3>
+      <PeoplesWidget />
+      <h3 class="sidebar-title">
+        #Channels
+      </h3>
+      <ChannelsComponent />
+      <h3 class="sidebar-title">
+        #Projects
+      </h3>
+      <ProjectsWidget />
+    </div>
+  </div>
 </template>
 
 <script>
@@ -29,7 +34,7 @@ export default {
 <style>
 .homesidebar {
 	padding: 15px 25px;
-	width: 25%
+	width: 25%;
 }
 
 .widgets {
@@ -39,13 +44,12 @@ export default {
 .sidebar-title {
 	padding: 10px 2px;
 	color: hsl(0deg, 0%, 21%);
-	font-weight: bold
+	font-weight: bold;
 }
 
 @media all and (max-width: 768px) {
 	.homesidebar {
-
-		width: 105%
+		width: 105%;
 	}
 }
 </style>

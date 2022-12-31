@@ -35,26 +35,26 @@
 import { defineComponent } from 'vue'
 
 export default defineComponent({
-  name: 'CardComponent',
-  props: {
-    title: {
-      type: String,
-      default: null
-    },
-    icon: {
-      type: String,
-      default: null
-    },
-    headerIcon: {
-      type: String,
-      default: null
-    }
-  },
-  emits: ['header-icon-click'],
-  methods: {
-    headerIconClick () {
-      this.$emit('header-icon-click')
-    }
-  }
+	name: 'CardComponent',
+	props: {
+		title: {
+			type: String,
+			default: null
+		},
+		icon: {
+			type: String,
+			default: null
+		},
+		headerIcon: {
+			type: String,
+			default: null
+		}
+	},
+	emits: ['header-icon-click'],
+	methods: {
+		headerIconClick () {
+			this.$emit('header-icon-click')
+		}
+	}
 })
 </script>

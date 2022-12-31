@@ -175,119 +175,119 @@ import UserAvatar from '@/components/UserAvatar.vue'
 import NotificationBar from '@/components/NotificationBar.vue'
 
 export default defineComponent({
-  name: 'ClientFormView',
-  components: {
-    UserAvatar,
-    FilePicker,
-    CardComponent,
-    TilesBlock,
-    HeroBar,
-    TitleBar,
-    NotificationBar
-  },
-  props: {
-    id: {
-      type: [String, Number],
-      default: null
-    }
-  },
-  data () {
-    return {
-      isProfileExists: false,
-      isLoading: false,
-      form: {
-        id: null,
-        name: null,
-        company: null,
-        city: null,
-        created_date: new Date(),
-        progress: 0
-      },
-      createdReadable: null
-    }
-  },
-  computed: {
-    titleStack () {
-      return [
-        'Admin',
-        'Clients',
-        this.isProfileExists ? this.form.name : 'New Client'
-      ]
-    },
-    heroTitle () {
-      return this.isProfileExists ? this.form.name : 'Create Client'
-    },
-    heroRouterLinkTo () {
-      return this.isProfileExists ? { name: 'client.new' } : { name: 'home' }
-    },
-    heroRouterLinkLabel () {
-      return this.isProfileExists ? 'New client' : 'Dashboard'
-    },
-    formCardTitle () {
-      return this.isProfileExists ? 'Edit client' : 'Create client'
-    },
-    ...mapState([
-      'clients'
-    ])
-  },
-  watch: {
-    id (newValue) {
-      this.isProfileExists = false
+	name: 'ClientFormView',
+	components: {
+		UserAvatar,
+		FilePicker,
+		CardComponent,
+		TilesBlock,
+		HeroBar,
+		TitleBar,
+		NotificationBar
+	},
+	props: {
+		id: {
+			type: [String, Number],
+			default: null
+		}
+	},
+	data () {
+		return {
+			isProfileExists: false,
+			isLoading: false,
+			form: {
+				id: null,
+				name: null,
+				company: null,
+				city: null,
+				created_date: new Date(),
+				progress: 0
+			},
+			createdReadable: null
+		}
+	},
+	computed: {
+		titleStack () {
+			return [
+				'Admin',
+				'Clients',
+				this.isProfileExists ? this.form.name : 'New Client'
+			]
+		},
+		heroTitle () {
+			return this.isProfileExists ? this.form.name : 'Create Client'
+		},
+		heroRouterLinkTo () {
+			return this.isProfileExists ? { name: 'client.new' } : { name: 'home' }
+		},
+		heroRouterLinkLabel () {
+			return this.isProfileExists ? 'New client' : 'Dashboard'
+		},
+		formCardTitle () {
+			return this.isProfileExists ? 'Edit client' : 'Create client'
+		},
+		...mapState([
+			'clients'
+		])
+	},
+	watch: {
+		id (newValue) {
+			this.isProfileExists = false
 
-      if (!newValue) {
-        this.form.id = null
-        this.form.name = null
-        this.form.company = null
-        this.form.city = null
-        this.form.created_date = new Date()
-        this.createdReadable = new Date().toLocaleDateString()
-      } else {
-        this.getData()
-      }
-    }
-  },
-  created () {
-    this.getData()
-  },
-  methods: {
-    getData () {
-      if (this.id) {
-        const item = find(
-          this.clients,
-          (item) => item.id === parseInt(this.id)
-        )
+			if (!newValue) {
+				this.form.id = null
+				this.form.name = null
+				this.form.company = null
+				this.form.city = null
+				this.form.created_date = new Date()
+				this.createdReadable = new Date().toLocaleDateString()
+			} else {
+				this.getData()
+			}
+		}
+	},
+	created () {
+		this.getData()
+	},
+	methods: {
+		getData () {
+			if (this.id) {
+				const item = find(
+					this.clients,
+					(item) => item.id === parseInt(this.id)
+				)
 
-        if (item) {
-          this.isProfileExists = true
+				if (item) {
+					this.isProfileExists = true
 
-          this.form.id = item.id
-          this.form.name = item.name
-          this.form.company = item.company
-          this.form.city = item.city
-          this.form.progress = item.progress
-          this.form.created_date = new Date(item.created_mm_dd_yyyy)
+					this.form.id = item.id
+					this.form.name = item.name
+					this.form.company = item.company
+					this.form.city = item.city
+					this.form.progress = item.progress
+					this.form.created_date = new Date(item.created_mm_dd_yyyy)
 
-          this.createdReadable = new Date(item.created_mm_dd_yyyy).toLocaleDateString()
-        } else {
-          this.$router.push({ name: 'client.new' })
-        }
-      }
-    },
-    dateInput (v) {
-      this.createdReadable = new Date(v).toLocaleDateString()
-    },
-    submit () {
-      this.isLoading = true
+					this.createdReadable = new Date(item.created_mm_dd_yyyy).toLocaleDateString()
+				} else {
+					this.$router.push({ name: 'client.new' })
+				}
+			}
+		},
+		dateInput (v) {
+			this.createdReadable = new Date(v).toLocaleDateString()
+		},
+		submit () {
+			this.isLoading = true
 
-      setTimeout(() => {
-        this.isLoading = false
+			setTimeout(() => {
+				this.isLoading = false
 
-        this.$buefy.snackbar.open({
-          message: 'Demo only',
-          queue: false
-        })
-      }, 750)
-    }
-  }
+				this.$buefy.snackbar.open({
+					message: 'Demo only',
+					queue: false
+				})
+			}, 750)
+		}
+	}
 })
 </script>

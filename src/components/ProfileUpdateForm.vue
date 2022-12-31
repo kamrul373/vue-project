@@ -67,47 +67,47 @@ import FilePicker from '@/components/FilePicker.vue'
 import CardComponent from '@/components/CardComponent.vue'
 
 export default defineComponent({
-  name: 'ProfileUpdateForm',
-  components: {
-    CardComponent,
-    FilePicker
-  },
-  data () {
-    return {
-      isLoading: false
-    }
-  },
-  computed: {
-    userName: {
-      get: function () {
-        return this.$store.state.userName
-      },
-      set: function (name) {
-        this.$store.commit('user', { name })
-      }
-    },
-    userEmail: {
-      get: function () {
-        return this.$store.state.userEmail
-      },
-      set: function (email) {
-        this.$store.commit('user', { email })
-      }
-    }
-  },
-  methods: {
-    submit () {
-      this.isLoading = true
+	name: 'ProfileUpdateForm',
+	components: {
+		CardComponent,
+		FilePicker
+	},
+	data () {
+		return {
+			isLoading: false
+		}
+	},
+	computed: {
+		userName: {
+			get: function () {
+				return this.$store.state.userName
+			},
+			set: function (name) {
+				this.$store.commit('user', { name })
+			}
+		},
+		userEmail: {
+			get: function () {
+				return this.$store.state.userEmail
+			},
+			set: function (email) {
+				this.$store.commit('user', { email })
+			}
+		}
+	},
+	methods: {
+		submit () {
+			this.isLoading = true
 
-      setTimeout(() => {
-        this.isLoading = false
+			setTimeout(() => {
+				this.isLoading = false
 
-        this.$buefy.snackbar.open({
-          message: 'Demo only',
-          queue: false
-        })
-      }, 750)
-    }
-  }
+				this.$buefy.snackbar.open({
+					message: 'Demo only',
+					queue: false
+				})
+			}, 750)
+		}
+	}
 })
 </script>

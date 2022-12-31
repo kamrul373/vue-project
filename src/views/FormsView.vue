@@ -188,41 +188,41 @@ import HeroBar from '@/components/HeroBar.vue'
 import CheckboxRadioPicker from '@/components/CheckboxRadioPicker.vue'
 
 export default defineComponent({
-  name: 'FormsView',
-  components: {
-    CheckboxRadioPicker,
-    HeroBar,
-    FilePicker,
-    CardComponent,
-    TitleBar
-  },
-  data () {
-    return {
-      titleStack: ['Admin', 'Forms'],
-      departments: ['Business Development', 'Marketing', 'Sales'],
-      form: {
-        name: null,
-        email: null,
-        phone: null,
-        department: null,
-        subject: null,
-        question: null
-      },
-      customElementsForm: {
-        checkbox: ['lorem'],
-        radio: 'one',
-        switch: true,
-        file: null
-      }
-    }
-  },
-  methods: {
-    formAction () {
-      this.$buefy.snackbar.open({
-        message: 'Demo only',
-        queue: false
-      })
-    }
-  }
+	name: 'FormsView',
+	components: {
+		CheckboxRadioPicker,
+		HeroBar,
+		FilePicker,
+		CardComponent,
+		TitleBar
+	},
+	data () {
+		return {
+			titleStack: ['Admin', 'Forms'],
+			departments: ['Business Development', 'Marketing', 'Sales'],
+			form: {
+				name: null,
+				email: null,
+				phone: null,
+				department: null,
+				subject: null,
+				question: null
+			},
+			customElementsForm: {
+				checkbox: ['lorem'],
+				radio: 'one',
+				switch: true,
+				file: null
+			}
+		}
+	},
+	methods: {
+		formAction () {
+			this.$buefy.snackbar.open({
+				message: 'Demo only',
+				queue: false
+			})
+		}
+	}
 })
 </script>

@@ -38,12 +38,12 @@
 import { defineComponent } from 'vue'
 
 export default defineComponent({
-  name: 'TitleBar',
-  props: {
-    titleStack: {
-      type: Array,
-      default: () => []
-    }
-  }
+	name: 'TitleBar',
+	props: {
+		titleStack: {
+			type: Array,
+			default: () => []
+		}
+	}
 })
 </script>

@@ -43,41 +43,41 @@
 import { defineComponent } from 'vue'
 
 export default defineComponent({
-  name: 'AsideMenuItem',
-  components: {
-    AsideMenuList: () => import('@/components/AsideMenuList.vue')
-  },
-  props: {
-    item: {
-      type: Object,
-      required: true
-    }
-  },
-  emits: ['menu-click'],
-  data () {
-    return {
-      isDropdownActive: false
-    }
-  },
-  computed: {
-    componentIs () {
-      return this.item.to ? 'router-link' : 'a'
-    },
-    hasDropdown () {
-      return !!this.item.menu
-    },
-    dropdownIcon () {
-      return this.isDropdownActive ? 'minus' : 'plus'
-    }
-  },
-  methods: {
-    menuClick () {
-      this.$emit('menu-click', this.item)
+	name: 'AsideMenuItem',
+	components: {
+		AsideMenuList: () => import('@/components/AsideMenuList.vue')
+	},
+	props: {
+		item: {
+			type: Object,
+			required: true
+		}
+	},
+	emits: ['menu-click'],
+	data () {
+		return {
+			isDropdownActive: false
+		}
+	},
+	computed: {
+		componentIs () {
+			return this.item.to ? 'router-link' : 'a'
+		},
+		hasDropdown () {
+			return !!this.item.menu
+		},
+		dropdownIcon () {
+			return this.isDropdownActive ? 'minus' : 'plus'
+		}
+	},
+	methods: {
+		menuClick () {
+			this.$emit('menu-click', this.item)
 
-      if (this.hasDropdown) {
-        this.isDropdownActive = !this.isDropdownActive
-      }
-    }
-  }
+			if (this.hasDropdown) {
+				this.isDropdownActive = !this.isDropdownActive
+			}
+		}
+	}
 })
 </script>

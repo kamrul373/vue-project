@@ -32,26 +32,26 @@
 import { defineComponent } from 'vue'
 
 export default defineComponent({
-  name: 'NotificationBar',
-  data () {
-    return {
-      isDismissed: false
-    }
-  },
-  computed: {
-    hasRightSlot () {
-      return this.$slots.right
-    }
-  },
-  methods: {
-    dismiss () {
-      this.isDismissed = true
+	name: 'NotificationBar',
+	data () {
+		return {
+			isDismissed: false
+		}
+	},
+	computed: {
+		hasRightSlot () {
+			return this.$slots.right
+		}
+	},
+	methods: {
+		dismiss () {
+			this.isDismissed = true
 
-      this.$buefy.snackbar.open({
-        message: 'Dismissed',
-        queue: false
-      })
-    }
-  }
+			this.$buefy.snackbar.open({
+				message: 'Dismissed',
+				queue: false
+			})
+		}
+	}
 })
 </script>

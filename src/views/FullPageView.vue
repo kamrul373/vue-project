@@ -19,12 +19,12 @@
 import { defineComponent } from 'vue'
 
 export default defineComponent({
-  name: 'FullPageView',
-  created () {
-    this.$store.dispatch('toggleFullPage', true)
-  },
-  beforeDestroy () {
-    this.$store.dispatch('toggleFullPage', false)
-  }
+	name: 'FullPageView',
+	created () {
+		this.$store.dispatch('toggleFullPage', true)
+	},
+	beforeDestroy () {
+		this.$store.dispatch('toggleFullPage', false)
+	}
 })
 </script>

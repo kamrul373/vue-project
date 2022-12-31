@@ -78,18 +78,18 @@ import TitleBar from '@/components/TitleBar.vue'
 import HeroBar from '@/components/HeroBar.vue'
 
 export default defineComponent({
-  name: 'TablesView',
-  components: {
-    HeroBar,
-    TitleBar,
-    CardComponent,
-    ClientsTableSample,
-    NotificationBar
-  },
-  data () {
-    return {
-      titleStack: ['Admin', 'Tables']
-    }
-  }
+	name: 'TablesView',
+	components: {
+		HeroBar,
+		TitleBar,
+		CardComponent,
+		ClientsTableSample,
+		NotificationBar
+	},
+	data () {
+		return {
+			titleStack: ['Admin', 'Tables']
+		}
+	}
 })
 </script>

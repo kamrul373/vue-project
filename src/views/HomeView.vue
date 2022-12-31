@@ -1,14 +1,15 @@
+/* eslint-disable */
 <template>
-	<div class="home">
-		<HomeSidebar></HomeSidebar>
-		<HomeFeed></HomeFeed>
-	</div>
+  <div class="home">
+    <HomeSidebar />
+    <HomeFeed />
+  </div>
 </template>
 
 <script>
 import { defineComponent } from 'vue'
 import HomeSidebar from '../components/HomeSidebar.vue'
-import HomeFeed from '@/components/HomeFeed.vue';
+import HomeFeed from '@/components/HomeFeed.vue'
 
 export default defineComponent({
 	name: 'HomeView',
