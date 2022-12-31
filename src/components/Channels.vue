@@ -1,6 +1,5 @@
 <template>
 	<div>
-		<h3 class="card-header-title">#Channels</h3>
 		<div>
 			<ul v-for="channel in channels" :key="channel.id">
 				<li class="flex">

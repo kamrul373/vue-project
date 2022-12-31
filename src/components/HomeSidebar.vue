@@ -1,20 +1,26 @@
 <template>
 	<div class="homesidebar">
-		<h3 class="card-header-title">Direct Messages</h3>
-		<Peoples></Peoples>
-		<ChannelsComponent></ChannelsComponent>
-		<ProjectsWidget></ProjectsWidget>
+		<div class="widgets">
+			<h3 class="sidebar-title">Direct Messages</h3>
+			<PeoplesWidget></PeoplesWidget>
+			<h3 class="sidebar-title">#Channels</h3>
+			<ChannelsComponent></ChannelsComponent>
+			<h3 class="sidebar-title">
+				#Projects
+			</h3>
+			<ProjectsWidget></ProjectsWidget>
+		</div>
 	</div>
 </template>
 
 <script>
-import Peoples from './Peoples.vue'
+import PeoplesWidget from './Peoples.vue'
 import ChannelsComponent from '../components/Channels.vue'
 import ProjectsWidget from '../components/ProjectsWidget.vue'
 export default {
 	name: 'HomeSidebar',
 	components: {
-		Peoples,
+		PeoplesWidget,
 		ChannelsComponent,
 		ProjectsWidget
 	}
@@ -23,6 +29,16 @@ export default {
 <style>
 .homesidebar {
 	padding: 15px 25px;
-	width: 20%
+	width: 25%
+}
+
+.widgets {
+	padding: 0 15px;
+}
+
+.sidebar-title {
+	padding: 10px 2px;
+	color: hsl(0deg, 0%, 21%);
+	font-weight: bold
 }
 </style>

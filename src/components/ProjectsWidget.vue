@@ -1,8 +1,5 @@
 <template>
 	<div>
-		<h3 class="card-header-title">
-			#Projects
-		</h3>
 		<div>
 			<ul v-for="project in projects" :key="project.id">
 				<li class="flex">
