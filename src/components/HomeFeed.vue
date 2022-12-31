@@ -56,7 +56,7 @@ export default {
 					"name": "Bob",
 					"status": "Online",
 					"text": "Life is a mirror and will reflect back to the thinker what he thinks into it.",
-					'img': "https://static.vecteezy.com/system/resources/previews/002/202/047/original/blue-high-tech-futuristic-cyberspace-technology-background-free-vector.jpg",
+					'img': "https://www.news-medical.net/images/news/ImageForNews_722328_16605707865419041.jpg",
 					"time": "4.30 PM"
 				}
 			]
@@ -90,5 +90,17 @@ export default {
 .post-img {
 	width: 60%;
 	padding: 10px 0
+}
+
+@media all and (max-width: 768px) {
+	.feed {
+		width: 90%;
+		margin: 0 auto
+	}
+
+	.post-img {
+		width: 100%;
+
+	}
 }
 </style>

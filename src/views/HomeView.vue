@@ -23,4 +23,10 @@ export default defineComponent({
 	display: flex;
 	column-gap: 20px;
 }
+
+@media all and (max-width: 768px) {
+	.home {
+		flex-direction: column-reverse
+	}
+}
 </style>

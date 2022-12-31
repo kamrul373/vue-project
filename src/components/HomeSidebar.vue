@@ -41,4 +41,11 @@ export default {
 	color: hsl(0deg, 0%, 21%);
 	font-weight: bold
 }
+
+@media all and (max-width: 768px) {
+	.homesidebar {
+
+		width: 105%
+	}
+}
 </style>
