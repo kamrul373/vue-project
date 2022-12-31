@@ -57,6 +57,7 @@ aside.aside {
           }
         }
       }
+
       ul {
         display: none;
         border-left: 0;
@@ -72,6 +73,7 @@ aside.aside {
             &.has-icon {
               padding-left: 0;
             }
+
             &.is-active {
               &:not(:hover) {
                 background: transparent;
@@ -92,24 +94,35 @@ aside.aside {
 }
 
 @include touch {
-  #app, nav.navbar {
+
+  #app,
+  nav.navbar {
     @include transition(margin-left);
   }
+
   aside.aside {
     @include transition(left);
   }
+
   html.has-aside-mobile-transition {
     body {
       overflow-x: hidden;
     }
-    body, #app, nav.navbar {
+
+    body,
+    #app,
+    nav.navbar {
       width: 100vw;
     }
   }
+
   html.has-aside-mobile-expanded {
-    #app, nav.navbar {
+
+    #app,
+    nav.navbar {
       margin-left: $aside-mobile-width;
     }
+
     aside.aside {
       left: 0;
     }
@@ -124,6 +137,7 @@ aside.aside {
       padding-left: math.div($default-padding, 6);
     }
   }
+
   html.has-aside-desktop-only-visible {
     aside.aside {
       display: block;
@@ -145,10 +159,14 @@ aside.aside {
 @include widescreen {
   html {
     &.has-aside-left {
-      nav.navbar, body {
+
+      nav.navbar,
+      body {
         padding-left: $aside-width;
       }
-      nav.navbar, body {
+
+      nav.navbar,
+      body {
         @include transition(padding-left);
       }
     }

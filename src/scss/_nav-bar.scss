@@ -83,6 +83,7 @@ nav.navbar {
         &.has-dropdown {
           >.navbar-link {
             background-color: $white-ter;
+
             .icon:last-child {
               display: none;
             }
@@ -121,6 +122,7 @@ nav.navbar {
           margin-right: $default-padding * .5;
         }
       }
+
       &.is-desktop-icon-only {
         span:not(.icon) {
           display: none;

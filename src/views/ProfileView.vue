@@ -3,38 +3,22 @@
     <title-bar :title-stack="titleStack" />
     <hero-bar>
       Profile
-      <router-link
-        slot="right"
-        to="/"
-        class="button"
-      >
+      <router-link slot="right" to="/" class="button">
         Dashboard
       </router-link>
     </hero-bar>
     <section class="section is-main-section">
       <tiles-block>
         <profile-update-form class="tile is-child" />
-        <card-component
-          title="Profile"
-          icon="account"
-          class="tile is-child"
-        >
+        <card-component title="Profile" icon="account" class="tile is-child">
           <user-avatar class="image has-max-width is-aligned-center" />
           <hr>
           <b-field label="Name">
-            <b-input
-              :value="userName"
-              custom-class="is-static"
-              readonly
-            />
+            <b-input :value="userName" custom-class="is-static" readonly />
           </b-field>
           <hr>
           <b-field label="E-mail">
-            <b-input
-              :value="userEmail"
-              custom-class="is-static"
-              readonly
-            />
+            <b-input :value="userEmail" custom-class="is-static" readonly />
           </b-field>
         </card-component>
       </tiles-block>
@@ -65,7 +49,7 @@ export default defineComponent({
     TitleBar,
     CardComponent
   },
-  data () {
+  data() {
     return {
       titleStack: ['Admin', 'Profile']
     }

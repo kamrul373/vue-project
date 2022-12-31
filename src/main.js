@@ -16,7 +16,7 @@ import App from './App.vue'
 store.dispatch('fetch', 'clients')
 
 /* Default title tag */
-const defaultDocumentTitle = 'Admin One Bulma Buefy'
+const defaultDocumentTitle = 'Coppernine Vue Dashboard'
 
 /* Collapse mobile aside menu on route change & set document title from route meta */
 router.afterEach(to => {

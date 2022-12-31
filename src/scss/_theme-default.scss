@@ -9,7 +9,7 @@ $default-padding: $size-base * 1.5;
 $family-sans-serif: "Nunito", sans-serif;
 
 /* Base color */
-$base-color: #2e323a;
+$base-color: #f8f8f8;
 $base-color-light: rgba(24, 28, 33, .06);
 
 /* App Scrollbars */
@@ -36,12 +36,12 @@ $navbar-avatar-size: 1.75rem;
 /* Aside: Bulma override */
 $menu-item-radius: 0;
 $menu-list-link-padding: $size-base * .5 0;
-$menu-label-color: lighten($base-color, 25%);
-$menu-item-color: lighten($base-color, 45%);
+$menu-label-color: #3361FF;
+$menu-item-color: #3361FF;
 $menu-item-hover-color: $white;
-$menu-item-hover-background-color: darken($base-color, 3.5%);
+$menu-item-hover-background-color: #3361FF;
 $menu-item-active-color: $white;
-$menu-item-active-background-color: darken($base-color, 2.5%);
+$menu-item-active-background-color: #3361FF;
 
 /* Aside: specifics */
 $aside-width: $size-base * 14;
@@ -50,8 +50,8 @@ $aside-icon-width: $size-base * 3;
 $aside-submenu-font-size: $size-base * .95;
 $aside-box-shadow: none;
 $aside-background-color: $base-color;
-$aside-tools-background-color: darken($aside-background-color, 10%);
-$aside-tools-color: $white;
+$aside-tools-background-color: $white;
+$aside-tools-color: #111111;
 $aside-scrollbar-track: $black-ter;
 $aside-scrollbar-thumb: $grey;
 //$app-scrollbar-hover: $grey;
