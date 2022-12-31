@@ -1,49 +1,51 @@
 <template>
 	<div>
-		<h3 class="card-header-title">#Channels</h3>
+		<h3 class="card-header-title">
+			#Projects
+		</h3>
 		<div>
-			<ul v-for="channel in channels" :key="channel.id">
+			<ul v-for="project in projects" :key="project.id">
 				<li class="flex">
 					<div>
-						<span>{{ channel.channel }}</span>
+						<span>{{ project.project }}</span>
 					</div>
 					<div>
-						<span class="green">+{{ channel.current }} </span>
-						<span>{{ channel.total }}</span>
+						<span class="green">+{{ project.current }} </span>
+						<span>{{ project.total }}</span>
 					</div>
 				</li>
 			</ul>
 		</div>
 	</div>
-	</div>
 </template>
+
 <script>
 export default {
-	name: 'ChannelsComponent',
+	name: 'ProjectsWidget',
 	data() {
 		return {
-			channels: [
+			projects: [
 				{
 					id: 1,
-					channel: 'Payment',
+					project: 'Descovery',
 					current: 12,
 					total: 564
 				},
 				{
 					id: 2,
-					channel: 'Desgin',
+					project: 'Bank',
 					current: 16,
 					total: 564
 				},
 				{
 					id: 3,
-					channel: 'Sales',
+					project: 'Electric',
 					current: 14,
 					total: 564
 				},
 				{
 					id: 4,
-					channel: 'Marketing',
+					project: 'Fashion',
 					current: 15,
 					total: 564
 				}]
